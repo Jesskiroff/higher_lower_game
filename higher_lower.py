@@ -18,9 +18,11 @@ if account_a== account_b:
     account_b = random.choice(data)
 
 #format account data into printable format 
-print(f"compare A: {format_data(account_a)}. ")
-print(f"compare B: {format_data(account_b)}. ")
+print(f"Compare A: {format_data(account_a)}. ")
+print(f"Compare B: {format_data(account_b)}. ")
 #ask user for guess
+
+guess = input("who has more followers? Type 'A' or 'B: ").lower()
 #check if user is correct
 # - get follower count of each accoiunt
 # use if statement to chck if user is correct
