@@ -21,10 +21,17 @@ account_b = random.choice(data)
 if account_a == account_b:
     account_b == random.choice(data)
 
-print(f" {account_a} & {account_b}")
+score = 0
+game_should_continue = True
 
 get_user_input = input(f"who has more followers: A or B?\n").lower()
 
 #create a while game_should_continue while loop
 
+
+while game_should_continue:
+    account_a = account_b
+    account_b = random.choice(data)
+    while account_a == account_b:
+        account_b = random.choice(data)
 #add score 
