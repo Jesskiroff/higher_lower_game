@@ -2,13 +2,12 @@
 #from art import logo
 from game_data import data
 import random
-#
 
 def format_data(account):
     account_name = account["name"]
     account_description = account["description"]
     account_country = account["country"]
-    return f"{account_name}, a {account_description}, from {account_country} "
+    return f"{account_name}, a {account_description} from {account_country}"
 
 def check_answer(user_guess, a_followers, b_followers):
     if a_followers == b_followers:
@@ -20,12 +19,10 @@ def check_answer(user_guess, a_followers, b_followers):
 score = 0
 game_should_continue = True
 
-#generate a random account from the data
 account_a = random.choice(data)
 account_b = random.choice(data)
 if account_a== account_b:
     account_b = random.choice(data)
-
 
 while game_should_continue:
 
@@ -56,7 +53,3 @@ while game_should_continue:
     else:
         print(f"Sorry, that's wrong. Your score is {score}!")
         game_should_continue = False
-
-
-
-
